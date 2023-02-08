@@ -72,12 +72,7 @@ usermodel.findOne({email:email},(error,user)=>{
     return;
     }
     usermodel.findOne({email:email},async (error,user)=>{
-    //     if(user){
-    //         const user =  user.findByCredentials(req.body.email, req.body.password);
-    //             const token =  user.generateAuthToken();
-    //             res.header("Authorization", `Bearer ${token}`).send({user, token});
-    //       }
-    //  else 
+        
      if(error){
             res.json({
                message:`internal error${error}`,
