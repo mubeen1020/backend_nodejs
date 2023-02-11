@@ -3,20 +3,29 @@ const mongoose=require("mongoose")
 const cartSchema=mongoose.Schema({
     product_id:{
         type:String,
-        required:true
+        required:false
     },
     price:{
+        type:Number,
+        required:false
+    },
+    title:{
         type:String,
+        required:false
+    },
+    description:{
+        type:String,
+        required:false
+    },
+    quantity:{
+        type:Number,
         required:true
     },
-    store_id:{
-        type:String,
-        required:true
-    },
-    vendor_id:{
-        type:String,
-        required:true
-    },
+    image: {
+        type: Buffer,
+        required: false
+      },
+    
 })
 const Cartmodel=mongoose.model("cart",cartSchema);
 module.exports = Cartmodel;

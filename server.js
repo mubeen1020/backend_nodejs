@@ -20,6 +20,10 @@ app.use(router);
 const cart_router=require("./routes/Cart_route")
 app.use(cart_router)
 
+// user route
+const user_cart=require("./routes/Form_route")
+app.use(user_cart)
+
 app.listen(PORT, ()=>{
     console.log(`Server running localhost:${PORT}`)
  })
